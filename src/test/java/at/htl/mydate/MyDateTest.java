@@ -1,4 +1,4 @@
-package at.htl.mydate;
+/* package at.htl.mydate;
 
 import org.junit.jupiter.api.Test;
 
@@ -91,4 +91,4 @@ class MyDateTest {
         MyDate date = new MyDate(2018, 9, 29);
         assertThat(date.formatDate(), is("Samstag, 29. September 2018"));
     }
-}
+}*/
