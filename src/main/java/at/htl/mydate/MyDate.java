@@ -22,7 +22,7 @@ public class MyDate {
 
     public MyDate(String input){
         String[] datum = input.split("\\.");
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) { //2018-11-04-HM: Schleife überflüssig, siehe Code unten
             if (i == 0){
                 setDay(Integer.parseInt(datum[i]));
             }else if(i == 1){
@@ -31,6 +31,14 @@ public class MyDate {
                 setYear(Integer.parseInt(datum[i]));
             }
         }
+
+
+        // 2018-11-04-HM: ohne Schleife:
+        /*
+        setDay(Integer.parseInt(datum[0]));
+        setMonth(Integer.parseInt(datum[1]));
+        setYear(Integer.parseInt(datum[2]));
+         */
 
 
     }
@@ -47,6 +55,11 @@ public class MyDate {
         return year;
     }
 
+    /*
+     2018-11-04-HM:
+      - Laut Aufgabenstellung sollten keine Setter nach außen angeboten werden
+      - Datum soll nur über Konstruktur gesetzt werden
+      */
     public void setDay(int day) {
         this.day = day;
     }
@@ -91,6 +104,7 @@ public class MyDate {
 
     }
 
+    // 2018-04-11-HM: Aussagekräftiger wäre getMonthName
     private String getMonthString() {
         String monthS = "";
         if (month == 1){
@@ -135,7 +149,7 @@ public class MyDate {
 
 
         }
-        if (weekday == 1 ){
+        if (weekday == 1 ){ //2018-11-04-HM: Switch würde sich anbieten
             weekdayWeekday = Weekday.MONDAY;
         }else if (weekday == 2){
             weekdayWeekday = Weekday.TUESDAY;

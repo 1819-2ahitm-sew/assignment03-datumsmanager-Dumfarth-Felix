@@ -21,7 +21,7 @@ public class Main {
             System.out.print(i +". Datum: ");
             input = scanner.nextLine();
             if(!input.equals("quit")){
-               datum = new MyDate(input);
+               datum = new MyDate(input); // 2018-04-11-HM: Fehlerprüfung bei ungültiger Eingabe fehlt
                if (counter == 1){
                    datumJung = datum;
                    counter ++;
@@ -33,7 +33,8 @@ public class Main {
                 System.out.println("Jüngstes Datum: "+datumJung.formatDate(input));
             }
         }
-        // not yet implemented
 
+
+        // not yet implemented
     }
 }
